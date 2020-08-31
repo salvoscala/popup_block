@@ -1,0 +1,9 @@
+popup_block:
+  css:
+    theme:
+      css/popup_block.css: {}
+  js: 
+    js/popup_block.js: {}
+  dependencies:
+    - core/jquery
+    - core/drupalSettings

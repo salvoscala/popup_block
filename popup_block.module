@@ -1,0 +1,34 @@
+<?php
+
+use Drupal\file\Entity\File;
+
+/**
+ * Implements hook_theme().
+ */
+function popup_block_theme(array &$settings) {
+
+  return [
+    'popup_block' => [
+      'variables' => ['url' => NULL],
+      'template' => 'block--popup-block',
+    ],
+  ];
+}
+
+/**
+ * Implements hook_page_attachments().
+ */
+function popup_block_page_attachments(array &$page) {
+
+  $default_value = \Drupal::state()->get('popup_block', []);
+  $image_url = NULL;
+  // Let's add  a settings to use in javascript to set the image.
+  if (isset($default_value['image']) && !empty($default_value['image'])) {
+    $default_image = $default_value['image'];
+    if ($file = File::load(reset($default_value['image']))) {
+      $image = $file->getFileUri();
+      $image_url = file_create_url($file->getFileUri());
+      $page['#attached']['drupalSettings']['popup_block']['popupBlockImage'] = $image_url;
+    }
+  }
+}

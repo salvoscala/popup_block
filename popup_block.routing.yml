@@ -1,0 +1,7 @@
+popup_block.settings:
+  path: '/admin/config/system/popup-block'
+  defaults:
+    _form: '\Drupal\popup_block\Form\PopupBlockSettingsForm'
+    _title: 'Popup Block'
+  requirements:
+    _permission: 'administer popup block settings'

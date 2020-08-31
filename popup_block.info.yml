@@ -1,0 +1,7 @@
+name: Popup Block
+description: Custom Popup Block
+package: Popup Block
+type: module
+core: 8.x
+dependencies:
+  - simple_popup_blocks

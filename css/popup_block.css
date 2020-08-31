@@ -1,0 +1,40 @@
+#block-popupblock {
+  display: none;
+}
+
+#spb-block-popupblock #block-popupblock {
+  display: block;
+}
+.spb-popup-main-wrapper {
+  border: none;
+  padding: 0;
+  box-shadow:  2px 2px 3px 2px #00000059;
+  top: 30%;
+}
+
+@media (max-width: 480px) {
+  .spb-popup-main-wrapper {
+    width: 90% !important;
+    margin-left: -35% !important;
+  }
+}
+
+.spb-popup-main-wrapper .spb-controls {
+  right: -10px;
+  top: -10px;
+}
+
+.spb-popup-main-wrapper .spb_close {
+  background: #fff;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  margin: 0;
+  text-align: center;
+  padding: 0;
+  font-size: 24px;
+  font-weight: 100;
+  line-height: 24px;
+  right: 0;
+  color: rgb(111,111,111);
+}

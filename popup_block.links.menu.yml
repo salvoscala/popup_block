@@ -1,0 +1,4 @@
+popup_block.settings:
+  title: 'Popup Block'
+  parent: system.admin_config_system
+  route_name: popup_block.settings
